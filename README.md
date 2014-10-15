@@ -1,10 +1,10 @@
 # Folder Structure Details
 
-## PHP
-### Implimentation of Roman Numerals code kata
+***PHP***
+Implementation of Roman Numerals code kata
 
-## JavaScript
-### Implimentation of Roman Numerals code kata
+***JavaScript***
+Implementation of Roman Numerals code kata
 
-## MontaryToCoins
-### JavaScript application to convert a montary amount into it's smallest amount of sterling coins. 
+***MontaryToCoins***
+JavaScript application to convert a monetary amount into it's smallest amount of sterling coins. 

@@ -2,7 +2,7 @@
 
 ### RomanNumeralGeneratorVanilla
 
-Vanilla PHP implimentation of the Roman Numeral Generator built through the following technologies:
+Vanilla PHP implementation of the Roman Numeral Generator built through the following technologies:
 
 - PHP
 - PHPUnit for TDD Unit Testing
@@ -10,4 +10,4 @@ Vanilla PHP implimentation of the Roman Numeral Generator built through the foll
 
 ### RomanNumeralGeneratorSlimPHP
 
-JSON API implimentation of the previously developed class. I abstracted returned values into JSON and the SlimPHP framework to define RESTful 'GET' endpoints.
+JSON API implementation of the previously developed class. I abstracted returned values into JSON and the SlimPHP framework to define RESTful 'GET' endpoints.
