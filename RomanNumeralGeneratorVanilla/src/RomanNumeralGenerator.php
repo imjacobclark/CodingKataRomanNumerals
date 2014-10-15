@@ -28,5 +28,22 @@ class RNGenerator implements RomanNumeralGenerator{
         }
 
         public function parse($string){
+		
+		// Note; Cannot split $string into array due to double char numerals
+		$string = $string;
+
+		$answer = 0;
+
+                foreach($this->numerals as $index => $numeral){
+                        while(strpos($string, $numeral) === 0){
+				$answer += $this->numbers[$index];
+                        	echo $answer."<br/>";
+				$string = substr($string, strlen($numeral));
+			}
+                }
+
+                return $answer;
+
+
         }
 }
