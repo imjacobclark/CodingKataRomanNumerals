@@ -1,8 +1,4 @@
 <?php
 
-require('RomanNumeralGeneratorInterface.php');
-require('RomanNumeralGenerator.php');
-
-$rng = new RNGenerator;
-
-echo $rng->parse("MMMCMXCIX");
+require('interfaces/RomanNumeralGeneratorInterface.php');
+require('classes/RomanNumeralGenerator.php');
