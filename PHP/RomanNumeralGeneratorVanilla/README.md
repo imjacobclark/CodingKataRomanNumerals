@@ -4,8 +4,8 @@ src/ 	= Source Code for Project
 
 test/ 	= PHPUnit Tests for Project
 
-Execute tests:
+Execute tests from within :
 
 ```php
-$ phpunit --bootstrap autoload.php RomanNumeralGeneratorVanilla/tests/RomanNumeralGeneratorTest.php
+$ phpunit --bootstrap ../autoload.php tests/RomanNumeralGeneratorTest.php
 ``` 
