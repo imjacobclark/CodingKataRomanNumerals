@@ -7,7 +7,7 @@ $('body').on('click', '[data-role="submit-numeral"]', function(e){
 		data = JSON.parse(data);
 		$('[data-input="integer"]').empty();
 		$("[data-result='integers']").empty();
-		$("[data-result='numerals']").html("Result: " + data.result);
+		$("[data-result='numerals']").html("<strong>Result: </strong>" + data.result);
 	    }
 	});
 	e.preventDefault();
@@ -22,7 +22,7 @@ $('body').on('click', '[data-role="submit-integer"]', function(e){
                 data = JSON.parse(data);
 		$('[data-input="numeral"]').empty();
                 $("[data-result='numerals']").empty();
-                $("[data-result='integers']").html("Result: " + data.result);
+                $("[data-result='integers']").html("<strong>Result:</strong> " + data.result);
             }
         });
         e.preventDefault();

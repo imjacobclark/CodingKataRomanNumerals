@@ -10,4 +10,4 @@ Vanilla PHP implimentation of the Roman Numeral Generator built through the foll
 
 ### RomanNumeralGeneratorSlimPHP
 
-JSON API implimentation utilising the previously developed class I abstracted returned values into JSON utilising the SlimPHP framework to define RESTful 'GET' endpoints.
+JSON API implimentation of the previously developed class. I abstracted returned values into JSON and the SlimPHP framework to define RESTful 'GET' endpoints.

@@ -35,23 +35,23 @@ class RNGenerator implements RomanNumeralGenerator{
         public function parse($string){
 		
 		// Note; Cannot split $string into array due to double char numerals
-		$string = $string;
+		$string = strtoupper($string);
 
 		$answer = 0;
 		
 		// For every numeral in the array iterate providing the index
-                foreach($this->numerals as $index => $numeral){
+        foreach($this->numerals as $index => $numeral){
 			// If a 0 is returned, the numeral has been found within the string
-                        while(strpos($string, $numeral) === 0){
+            while(strpos($string, $numeral) === 0){
 				// If a 0 has been returned, we can get its value from the corresponding numbers array and increment our answer variable accordingly
 				$answer += $this->numbers[$index];
 				// Finally we must continue the search after the previous numeral that has been found
 				$string = substr($string, strlen($numeral));
 			}
-                }
+        }
 		
 		// Return the integer
-                return $answer;
+        return $answer;
 
 
         }

@@ -1,0 +1,12 @@
+{
+  "name": "Coins",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "*",
+    "underscore": "*",
+    "backbone": "*",
+    "handlebars": "*",
+    "bootstrap": "*"
+  },
+  "private": true
+}
