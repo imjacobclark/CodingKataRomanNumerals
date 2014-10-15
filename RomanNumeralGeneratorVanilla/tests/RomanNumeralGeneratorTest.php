@@ -16,14 +16,6 @@ class RomanNumeralGeneratorTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(false, $generate);
 	}
 
-        public function testParseHighNumeralsReturnFalse(){
-                $rng = new RNGenerator;
-
-                $generate = $rng->parse('MMMMMMMMMCMXCIX');
-
-                $this->assertEquals(false, $generate);
-        }
-
 	public function testIWhen1IsArgument(){
 		$rng = new RNGenerator;
 
@@ -64,18 +56,18 @@ class RomanNumeralGeneratorTest extends PHPUnit_Framework_TestCase{
                 $this->assertEquals('MMMCMXCIX', $generate);
         }
 
-	public function test1WhenXIsArgument(){
+	public function test1WhenIIsArgument(){
                 $rng = new RNGenerator;
 
                 $generate = $rng->parse('X');
 
-                $this->assertEquals(1, $generate);
+                $this->assertEquals(10, $generate);
         }
 
-        public function test5WhenXIsArgument(){
+        public function test5WhenVIsArgument(){
                 $rng = new RNGenerator;
 
-                $generate = $rng->parse('X');
+                $generate = $rng->parse('V');
 
                 $this->assertEquals(5, $generate);
         }
