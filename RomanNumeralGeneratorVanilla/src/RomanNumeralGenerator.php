@@ -1,10 +1,12 @@
 <?php
 
-require('RomanNumeralGeneratorInterface.php');
-
-class RNGenerate implements RomanNumeralGenerator{
+class RNGenerator implements RomanNumeralGenerator{
 
         public function generate($integer){
+
+		if($integer < 1 || $integer > 3999) 
+			return false;
+
         }
 
         public function parse($string){

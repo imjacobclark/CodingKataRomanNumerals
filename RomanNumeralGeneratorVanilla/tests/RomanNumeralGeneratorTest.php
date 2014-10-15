@@ -1,10 +1,18 @@
 <?php
 class RomanNumeralGeneratorTest extends PHPUnit_Framework_TestCase{
-    public function testNegativeNumbersReturnFalse(){
-        $rng = new RomanNumeralGenerator();
+	public function testNegativeNumbersReturnFalse(){
+        	$rng = new RNGenerator;
 
-        $generate = $rng->generate(-100);
+		$generate = $rng->generate(-100);
 
-        $this->assertEquals(false, $generate);
-    }
+		$this->assertEquals(false, $generate);
+	}
+
+	public function testHighNumbersReturnFalse(){
+		$rng = new RNGenerator;
+
+		$generate = $rng->generate(1234567);
+
+		$this->assertEquals(false, $generate);
+	}
 }
