@@ -1,5 +1,5 @@
 <?php
-	require('../autoload.php');
+	require('../../../autoload.php');
 	$rng = new RNGenerator;
 ?>
 <!DOCTYPE html>
