@@ -14,6 +14,17 @@ class RNGenerator implements RomanNumeralGenerator{
 		if($integer < 1 || $integer > 3999) 
 			return false;
 
+		$answer = "";
+
+                foreach($this->numerals as $index => $numeral){
+                        while($integer >= $this->numbers[$index]){
+                                $integer = $integer - $this->numbers[$index];
+                                $answer .= $numeral;
+                        }
+                }
+
+                return $answer;
+
         }
 
         public function parse($string){
