@@ -10,7 +10,6 @@ RomanNumeralGenerator.prototype.generate = function(number){
 	if(number < 1 || number > 3999) 
 		return false;
 
-
 	// Answer
 	this.answer = "";
 
@@ -28,7 +27,5 @@ RomanNumeralGenerator.prototype.generate = function(number){
 	// Return answer string
 	return this.answer;
 }
-
-
 
 module.exports = RomanNumeralGenerator;

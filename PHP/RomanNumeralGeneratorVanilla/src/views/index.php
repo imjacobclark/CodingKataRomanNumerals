@@ -1,6 +1,6 @@
 <?php
-	require('../../../autoload.php');
-	$rng = new RNGenerator;
+  require('../../../autoload.php');
+  $rng = new RNGenerator;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,71 +37,72 @@
 
   <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Roman Numerals Converter</a>
-        </div>
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Roman Numerals Converter</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="starter-template">
+      <p>Jacob Clark - Wednesday 15th October 2014</p>
+      <div class="integer">
+        <h1>Integer to Roman Numerals</h1>
+          <form method="POST" action="">
+          <label for="integer">Enter an integer</label>
+          <input type="text" name="integer" placeholder="1 - 3999">
+          <input type="submit">
+        </form>
+
+        <?php                                                                                                                                                 
+          if(isset($_POST['integer'])){
+            $output = $rng->generate($_POST['integer']);         
+            if($output == false){
+              echo "Please enter a valid number.";
+            }else{
+        ?>      
+            <p style="padding-top: 10px;"><strong>Result:</strong>
+        <?php   
+            echo $output;                              
+            }
+          }       
+        ?>
+      </div>
+
+      <div class="numerals">
+        <h1>Roman Numerals to Integer</h1>
+        <form method="POST" action="">
+          <label for="numeral">Enter a numeral pattern</label>
+          <input type="text" name="numeral" placeholder="XXI">
+          <input type="submit">
+        </form>
+
+        <?php
+          if(isset($_POST['numeral'])){
+            $output = $rng->parse($_POST['numeral']);                    
+            if($output == false){
+              echo "Please enter a valid numeral pattern.";
+            }else{
+        ?> 
+            <p style="padding-top: 10px;"><strong>Result:</strong> 
+        <?php	
+            echo $output;                 
+            }
+          }       
+        ?>
+        </p>
       </div>
     </div>
 
-    <div class="container">
-      <div class="starter-template">
-        <p>Jacob Clark - Wednesday 15th October 2014</p>
-	<div class="integer">
-          <h1>Integer to Roman Numerals</h1>
-          <form method="POST" action="">
-            <label for="integer">Enter an integer</label>
-            <input type="text" name="integer" placeholder="1 - 3999">
-            <input type="submit">
-          </form>
-        
-          <?php                                                                                                                                                 
-                if(isset($_POST['integer'])){
-                        $output = $rng->generate($_POST['integer']);         
-                        if($output == false){
-                                echo "Please enter a valid number.";
-                        }else{
-        ?>      
-                                <p style="padding-top: 10px;"><strong>Result:</strong>
-        <?php   
-                                echo $output;                              
-                        }
-                }       
-         ?>
-	</div>
-        <div class="numerals">
-          <h1>Roman Numerals to Integer</h1>
-          <form method="POST" action="">
-            <label for="numeral">Enter a numeral pattern</label>
-            <input type="text" name="numeral" placeholder="XXI">
-            <input type="submit">
-          </form>
-
-          <?php
-                if(isset($_POST['numeral'])){
-	              	$output = $rng->parse($_POST['numeral']);                    
-                        if($output == false){
-                                echo "Please enter a valid numeral pattern.";
-                        }else{
-	?> 
-				<p style="padding-top: 10px;"><strong>Result:</strong> 
-	<?php	
-                                echo $output;                 
-                	}
-		}       
-         ?>
-        </p>
-        </div>
-      </div>
-
-    </div><!-- /.container -->
+  </div><!-- /.container -->
 
   </body>
 </html>

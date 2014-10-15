@@ -2,7 +2,7 @@
 
 ### RomanNumeralGeneratorVanilla
 
-Vanilla PHP implementation of the Roman Numeral Generator built through the following technologies:
+Roman Numeral Generator implemented in PHP
 
 - PHP
 - PHPUnit for TDD Unit Testing
