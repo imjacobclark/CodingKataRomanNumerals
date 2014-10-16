@@ -1,4 +1,4 @@
-i# Roman Numeral Generator implimented in JavaScript
+# Roman Numeral Generator implimented in JavaScript
 
 ### RomanNumeralGenerator
 
