@@ -1,6 +1,6 @@
 # Roman Numeral Generators implimented in PHP
 
-### RomanNumeralGeneratorVanilla
+### RomanNumeralGenerator
 
 Roman Numeral Generator implemented in PHP
 
