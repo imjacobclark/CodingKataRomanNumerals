@@ -9,6 +9,6 @@ Roman Numeral Generator implemented in PHP
 
 Endpoints:
 
-/getInteger/:strings
+/getInteger/:string
 
-/getNumeral/:integer
+/getNumerals/:integer
