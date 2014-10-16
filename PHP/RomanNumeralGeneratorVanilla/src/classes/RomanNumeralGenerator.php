@@ -44,11 +44,11 @@ class RNGenerator implements RomanNumeralGenerator{
 		$answer = 0;
 
 		// For every numeral in the array iterate providing the index
-		foreach($this->numerals as $index => $numeral){
+		foreach($this->numerals as $numeral => $number){
 			// If a 0 is returned, the numeral has been found within the string
 			while(strpos($string, $numeral) === 0){
 				// If a 0 has been returned, we can get its value from the corresponding numbers array and increment our answer variable accordingly
-				$answer += $this->numbers[$index];
+				$answer += $number;
 				// Finally we must continue the search after the previous numeral that has been found
 				$string = substr($string, strlen($numeral));
 			}
