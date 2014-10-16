@@ -28,4 +28,35 @@ RomanNumeralGenerator.prototype.generate = function(number){
 	return this.answer;
 }
 
+
+RomanNumeralGenerator.prototype.parse = function(string){
+	// Answer
+	this.answer = 0;
+
+	string = string;
+
+	// Iterate over each number
+	for(var i = 0; i < this.numerals.length; i++){			
+		// If number is more than or equal to current number in array iterate
+
+		while(this.stringPosition(string, this.numerals[i]) === 0){
+			// If a 0 has been returned, we can get its value from the corresponding numbers array and increment our answer variable accordingly
+			this.answer += this.numbers[i];
+			// Finally we must continue the search after the previous numeral that has been found
+			string = string.substr(this.numerals[i].length);
+		}
+
+	}
+
+	// Return answer string
+	return this.answer;
+}
+
+RomanNumeralGenerator.prototype.stringPosition = function(string, numeral){
+	// Grab the index of
+	var i = (string + '').indexOf(numeral, 0);
+	// If -1 return false, otherwise return the position
+	return i === -1 ? false : i;
+}
+
 module.exports = RomanNumeralGenerator;

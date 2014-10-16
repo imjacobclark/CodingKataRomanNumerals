@@ -1,7 +1,7 @@
 var RomanNumeralGenerator = require('../RomanNumeralGenerator.js'),
 	assert = require("assert");
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return false is a number less than 1 is passed', function(){
 			
@@ -15,7 +15,7 @@ describe('RomanNumberGenerator', function(){
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return false is a number more than 3999 is passed', function(){
 			
@@ -29,7 +29,7 @@ describe('RomanNumberGenerator', function(){
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return the string "I" when 1 is an argument', function(){
 			
@@ -43,7 +43,7 @@ describe('RomanNumberGenerator', function(){
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return the string "V" when 5 is an argument', function(){
 
@@ -57,7 +57,7 @@ describe('RomanNumberGenerator', function(){
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return the string "X" when 10 is an argument', function(){
 			
@@ -66,12 +66,12 @@ describe('RomanNumberGenerator', function(){
 
 			assert.equal("X", output);
 			assert.equal(typeof output, 'string');
-		
+			
 		});
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return the string "XX" when 20 is an argument', function(){
 			
@@ -85,7 +85,7 @@ describe('RomanNumberGenerator', function(){
 	});
 });
 
-describe('RomanNumberGenerator', function(){
+describe('RomanNumberGenerator generate', function(){
 	describe('generate()', function(){
 		it('should return the string "MMMCMXCIX" when 3999 is an argument', function(){
 
@@ -94,6 +94,76 @@ describe('RomanNumberGenerator', function(){
 
 			assert.equal("MMMCMXCIX", output);
 			assert.equal(typeof output, 'string');
+		
+		});
+	});
+});
+
+describe('RomanNumberGenerator parse', function(){
+	describe('generate()', function(){
+		it('should return the string "I" when 1 is an argument', function(){
+			
+			rng = new RomanNumeralGenerator();
+			output = rng.parse("I")
+
+			assert.equal(1, output);
+			assert.equal(typeof output, 'number');
+		
+		});
+	});
+});
+
+describe('RomanNumberGenerator parse', function(){
+	describe('generate()', function(){
+		it('should return the string "V" when 5 is an argument', function(){
+
+			rng = new RomanNumeralGenerator();
+			output = rng.parse("V")
+
+			assert.equal(5, output);
+			assert.equal(typeof output, 'number');
+		
+		});
+	});
+});
+
+describe('RomanNumberGenerator parse', function(){
+	describe('generate()', function(){
+		it('should return the string "X" when 10 is an argument', function(){
+			
+			rng = new RomanNumeralGenerator();
+			output = rng.parse("X")
+
+			assert.equal(10, output);
+			assert.equal(typeof output, 'number');
+		
+		});
+	});
+});
+
+describe('RomanNumberGenerator parse', function(){
+	describe('generate()', function(){
+		it('should return the string "XX" when 20 is an argument', function(){
+			
+			rng = new RomanNumeralGenerator();
+			output = rng.parse("XX")
+
+			assert.equal(20, output);
+			assert.equal(typeof output, 'number');
+		
+		});
+	});
+});
+
+describe('RomanNumberGenerator parse', function(){
+	describe('generate()', function(){
+		it('should return the string "MMMCMXCIX" when 3999 is an argument', function(){
+
+			rng = new RomanNumeralGenerator();
+			output = rng.parse("MMMCMXCIX")
+
+			assert.equal(3999, output);
+			assert.equal(typeof output, 'number');
 		
 		});
 	});
