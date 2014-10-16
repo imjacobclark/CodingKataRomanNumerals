@@ -16,6 +16,14 @@ class RomanNumeralGeneratorTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(false, $generate);
 	}
 
+        public function testNonIntegerReturnsFalse(){
+                $rng = new RNGenerator;
+
+                $generate = $rng->generate("1234567");
+
+                $this->assertEquals(false, $generate);
+        }
+
 	public function testIWhen1IsArgument(){
 		$rng = new RNGenerator;
 

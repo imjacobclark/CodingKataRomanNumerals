@@ -20,7 +20,7 @@ class RNGenerator implements RomanNumeralGenerator{
 
 	public function generate($integer){
 		// If more or less than number support 
-		if($integer < 1 || $integer > 3999) 
+		if($integer < 1 || $integer > 3999 || gettype($integer) != 'integer') 
 			return false;
 
 		// Assuming a string should be returned rather than an array
@@ -43,6 +43,8 @@ class RNGenerator implements RomanNumeralGenerator{
 	}
 
 	public function parse($string){
+		if(gettype($string) != 'string') 
+			return false;
 
 		// Note; Cannot split $string into array due to double char numerals
 		$string = strtoupper($string);
