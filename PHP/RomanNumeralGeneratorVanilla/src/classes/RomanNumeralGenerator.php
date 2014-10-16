@@ -31,7 +31,7 @@ class RNGenerator implements RomanNumeralGenerator{
 			// With our remaining integer, if it is more of equal to corresponding roman numerals integer
 			while($integer >= $number){
 				// Subtract it from our remaining integer
-				$integer = $integer - $number;
+				$integer -= $number;
 				// Append the numeral to our answer variable (string)
 				$answer .= $numeral;
 			}
