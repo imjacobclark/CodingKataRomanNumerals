@@ -2,20 +2,10 @@
 class RNGenerator implements RomanNumeralGenerator{
 
 	function __construct() {
-		$this->numerals = [	"M" 	=> 1000, 
-							"CM" 	=> 900, 
-							"D" 	=> 500, 
-							"CD" 	=> 400, 
-							"C" 	=> 100, 
-							"XC" 	=> 90, 
-							"L" 	=> 50, 
-							"XL" 	=> 40, 
-							"X" 	=> 10, 
-							"IX" 	=> 9, 
-							"V" 	=> 5, 
-							"IV" 	=> 4, 
-							"I" 	=> 1
-							];
+		// Numerals
+		$this->numerals = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+		// Decimals
+		$this->numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
 	}
 
 	public function generate($integer){
@@ -27,11 +17,11 @@ class RNGenerator implements RomanNumeralGenerator{
 		$answer = "";
 
 		// For every numeral in the array iterate providing the index
-		foreach($this->numerals as $numeral => $number){
+		foreach($this->numerals as $index => $numeral){
 			// With our remaining integer, if it is more of equal to corresponding roman numerals integer
-			while($integer >= $number){
+			while($integer >= $this->numbers[$index]){
 				// Subtract it from our remaining integer
-				$integer = $integer - $number;
+				$integer = $integer - $this->numbers[$index];
 				// Append the numeral to our answer variable (string)
 				$answer .= $numeral;
 			}
@@ -50,11 +40,11 @@ class RNGenerator implements RomanNumeralGenerator{
 		$answer = 0;
 
 		// For every numeral in the array iterate providing the index
-		foreach($this->numerals as $numeral => $number){
+		foreach($this->numerals as $index => $numeral){
 			// If a 0 is returned, the numeral has been found within the string
 			while(strpos($string, $numeral) === 0){
 				// If a 0 has been returned, we can get its value from the corresponding numbers array and increment our answer variable accordingly
-				$answer += $number;
+				$answer += $this->numbers[$index];
 				// Finally we must continue the search after the previous numeral that has been found
 				$string = substr($string, strlen($numeral));
 			}
