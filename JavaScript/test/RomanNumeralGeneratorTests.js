@@ -1,4 +1,4 @@
-var RomanNumeralGenerator = require('../RomanNumeralGenerator.js'),
+var RomanNumeralGenerator = require('../src/RomanNumeralGenerator.js'),
 	assert = require("assert");
 
 describe('RomanNumberGenerator generate', function(){
