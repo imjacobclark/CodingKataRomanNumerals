@@ -64,7 +64,7 @@
 
         <?php                                                                                                                                                 
           if(isset($_POST['integer'])){
-            $output = $rng->generate($_POST['integer']);         
+            $output = $rng->generate( intval($_POST['integer']) );         
             if($output == false){
               echo "Please enter a valid number.";
             }else{
