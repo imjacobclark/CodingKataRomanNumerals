@@ -1,4 +1,4 @@
 <?php
 
-require('RomanNumeralGeneratorRomanNumeralGeneratorVanilla/src/interfaces/RomanNumeralGeneratorInterface.php');
-require('RomanNumeralGeneratorRomanNumeralGeneratorVanilla/src/classes/RomanNumeralGenerator.php');
+require('RomanNumeralGeneratorVanilla/src/interfaces/RomanNumeralGeneratorInterface.php');
+require('RomanNumeralGeneratorVanilla/src/classes/RomanNumeralGenerator.php');
